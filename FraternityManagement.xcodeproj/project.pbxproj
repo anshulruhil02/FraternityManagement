@@ -14,6 +14,8 @@
 		F33D02A82B5A7AB600051CF8 /* FraternityManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D02A72B5A7AB600051CF8 /* FraternityManagementTests.swift */; };
 		F33D02B22B5A7AB600051CF8 /* FraternityManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D02B12B5A7AB600051CF8 /* FraternityManagementUITests.swift */; };
 		F33D02B42B5A7AB600051CF8 /* FraternityManagementUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D02B32B5A7AB600051CF8 /* FraternityManagementUITestsLaunchTests.swift */; };
+		F33D02C22B5A869C00051CF8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D02C12B5A869C00051CF8 /* LoginView.swift */; };
+		F33D02C62B5A86F400051CF8 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D02C52B5A86F400051CF8 /* LoginVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		F33D02AD2B5A7AB600051CF8 /* FraternityManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FraternityManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33D02B12B5A7AB600051CF8 /* FraternityManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FraternityManagementUITests.swift; sourceTree = "<group>"; };
 		F33D02B32B5A7AB600051CF8 /* FraternityManagementUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FraternityManagementUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F33D02C12B5A869C00051CF8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F33D02C52B5A86F400051CF8 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		F33D02942B5A7AB500051CF8 /* FraternityManagement */ = {
 			isa = PBXGroup;
 			children = (
+				F33D02C72B5A88D500051CF8 /* Authentication */,
 				F33D02952B5A7AB500051CF8 /* FraternityManagementApp.swift */,
 				F33D02972B5A7AB500051CF8 /* ContentView.swift */,
 				F33D02992B5A7AB600051CF8 /* Assets.xcassets */,
@@ -127,6 +132,31 @@
 				F33D02B32B5A7AB600051CF8 /* FraternityManagementUITestsLaunchTests.swift */,
 			);
 			path = FraternityManagementUITests;
+			sourceTree = "<group>";
+		};
+		F33D02C02B5A868A00051CF8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F33D02C12B5A869C00051CF8 /* LoginView.swift */,
+				F33D02C52B5A86F400051CF8 /* LoginVM.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F33D02C72B5A88D500051CF8 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F33D02C82B5A88E900051CF8 /* SignUp */,
+				F33D02C02B5A868A00051CF8 /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F33D02C82B5A88E900051CF8 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33D02C62B5A86F400051CF8 /* LoginVM.swift in Sources */,
+				F33D02C22B5A869C00051CF8 /* LoginView.swift in Sources */,
 				F33D02982B5A7AB500051CF8 /* ContentView.swift in Sources */,
 				F33D02962B5A7AB500051CF8 /* FraternityManagementApp.swift in Sources */,
 			);
