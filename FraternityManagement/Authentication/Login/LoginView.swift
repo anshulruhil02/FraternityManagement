@@ -34,7 +34,7 @@ struct LoginView: View {
                         .padding()
                         .background(Color.white)
                         .cornerRadius(5.0)
-                        .padding(.horizontal, 20) // replaced Paddings.mediumPadding2 with a numerical value
+                        .padding(.horizontal, 20) // replaced` Paddings.mediumPadding2 with a numerical value
                         .autocorrectionDisabled()
                     //MARK: Password Text Field
                     SecureField("Password", text: $vm.password)
@@ -46,7 +46,9 @@ struct LoginView: View {
 
                     //MARK: Login Button
                     Button(action: {
-                        vm.loginButtonTapped()
+                        Task{
+                            await vm.loginButtonTapped()
+                        }
                     }) {
                         HStack {
                             Image(systemName: "arrow.right")
@@ -78,14 +80,3 @@ struct LoginView: View {
 }
 
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        // Create an instance of your ViewModel
-        let viewModel = LoginVM()
-
-        // Pass the ViewModel instance to your LoginView
-        LoginView(vm: viewModel)
-            .previewDevice("iPhone 12") // Specify the device for the preview
-            // You can add more modifiers to customize the preview environment
-    }
-}

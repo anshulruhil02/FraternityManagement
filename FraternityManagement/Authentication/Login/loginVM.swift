@@ -10,9 +10,19 @@ import Foundation
 class LoginVM: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
+    private var authVM: AuthVM
     
-    func loginButtonTapped(){
-        print("login button tapped")
+    init(authVM: AuthVM){
+        self.authVM = authVM
+    }
+    
+    func loginButtonTapped() async{
+        do {
+            let user = try await authVM.login(email: email, password: password)
+            print("Login Successful for user: \(user)")
+        } catch {
+            print("Login failed with error: \(error)")
+        }
     }
     
     func signupButtinTapped(){
